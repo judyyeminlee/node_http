@@ -5,4 +5,10 @@ console.log("EXERCISE 1:\n==========\n");
 
 const http = require("http");
 
-// Finish setting up the server
+const server = http.createServer((request, response) => {
+  response.end("Hello again");
+});
+
+server.listen(5000, () => {
+  console.log("Can you see me?");
+});
